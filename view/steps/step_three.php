@@ -1,6 +1,6 @@
 <?php
     if (!_GET_S("db")) header("Location:init.php?step=1");
-    if (_GET_S("err") == "diffpw") echo "<script>alert('两次输入的密码不一致!')</script>";
+    if (_GET_S("err") == "diffpw") showMessage('两次输入的密码不一致!');
 ?>
 
 <div class="mdui-container-fluid">

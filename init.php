@@ -1,6 +1,7 @@
 <?php
 include 'lib/config.php';
 include 'lib/database.php';
+include 'lib/jstools.php';
 include 'lib/safe_request.php';
 
 function getSubTitle() {
@@ -45,7 +46,7 @@ function getSubTitle() {
             <?php
             switch (_GET_S('step')) {
                 case 1:
-                    if (_GET_S("err") == "incom") echo "<script>alert('信息填入不完整，请重新填写')</script>";
+                    if (_GET_S("err") == "incom") showMessage('信息填入不完整，请重新填写');
                     include 'view/steps/step_one.php';
                     break;
                 case 2:
