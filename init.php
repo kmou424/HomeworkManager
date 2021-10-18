@@ -32,7 +32,7 @@ function getSubTitle() {
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	    <title>初始化 - <?php echo getSubTitle() ?></title>
 	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css">
-        <link rel="stylesheet" href="<?php echo $_SERVER['HTTP_HOST'] ?>/css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
 	    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"></script>
     </head>
     <body>
