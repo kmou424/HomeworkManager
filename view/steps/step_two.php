@@ -8,7 +8,7 @@
                     header("Location:init.php?step=1&err=incom");
                 } else {
                     echo "正在连接数据库...";
-                    $mysqi = connectDataBase();
+                    $mysqi = getDataBase(false);
                     if (!$mysqi) echo "\n连接失败!";
                     else {
                         echo "\n连接成功!";
