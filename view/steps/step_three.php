@@ -1,11 +1,11 @@
 <?php
-    if (!_GET_S("db")) header("Location:init.php?step=1");
+    if (!_GET_S("db")) header("Location:$target?step=1");
     if (_GET_S("err") == "diffpw") showMessage('两次输入的密码不一致!');
 ?>
 
 <div class="mdui-container-fluid">
     <div class="nexmoe-item">
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>?step=4" method="post">
+        <form action="<?php echo $target;?>?step=4" method="post">
             <div class="mdui-textfield">
             <div class="mdui-textfield">
                 <i class="mdui-icon material-icons">account_circle</i>

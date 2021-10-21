@@ -1,28 +1,35 @@
 <?php
-include 'lib/config.php';
-include 'lib/database.php';
-include 'lib/jstools.php';
-include 'lib/safe_request.php';
+    include 'lib/config.php';
+    include 'lib/database.php';
+    include 'lib/jstools.php';
+    include 'lib/safe_request.php';
 
-function getSubTitle() {
-    switch ($_GET['step']) {
-        case 1:
-            return "数据库";
-            break;
-        case 2:
-            return "连接中";
-            break;
-        case 3:
-            return "创建面板管理员";
-            break;
-        case 4:
-            return "完成";
-            break;
-        default:
-            header("Location:index.php");
-            break;
+    $target = _GET_SELF_WITHOUT_EXT();
+
+    function getSubTitle() {
+        switch ($_GET['step']) {
+            case 1:
+               return "数据库";
+               break;
+            case 2:
+                return "连接中";
+                break;
+            case 3:
+                return "创建面板管理员";
+                break;
+            case 4:
+                return "完成";
+                break;
+            default:
+                header("Location:index.php");
+                break;
+        }
     }
-}
+    if (getConfValue('isInit')) {
+        $protocol = _GET_PROTOCOL_S();
+        $url = $_SERVER['HTTP_HOST'];
+        header("Location:$protocol$url"); 
+    }
 ?>
 
 <!DOCTYPE html>

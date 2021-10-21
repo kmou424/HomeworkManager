@@ -1,6 +1,6 @@
 <div class="mdui-container-fluid">
     <div class="nexmoe-item">
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>?step=2" method="post">
+        <form action="<?php echo $target;?>?step=2" method="post">
             <div class="mdui-textfield">
                 <i class="mdui-icon material-icons">link</i>
                 <label class="mdui-textfield-label">数据库服务器</label>

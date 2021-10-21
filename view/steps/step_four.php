@@ -15,7 +15,7 @@
                 $url = $_SERVER['HTTP_HOST'];
                 header("Location:$protocol$url"); 
             } else {
-                header("Location:init.php?step=3&db=true&err=diffpw");
+                header("Location:$target?step=3&db=true&err=diffpw");
             }
         ?>
     </div>

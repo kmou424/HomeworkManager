@@ -5,7 +5,7 @@
                 $_POST['database_name'] == null ||
                 $_POST['database_username'] == null ||
                 $_POST['database_password'] == null) {
-                    header("Location:init.php?step=1&err=incom");
+                    header("Location:$target?step=1&err=incom");
                 } else {
                     echo "正在连接数据库...";
                     $mysqi = getDataBase(false);
@@ -17,7 +17,7 @@
                         setConfValue('dataBaseName', $_POST['database_name']);
                         setConfValue('dataBaseUsername', $_POST['database_username']);
                         setConfValue('dataBasePassword', $_POST['database_password']);
-                        header("Location:init.php?step=3&db=true");
+                        header("Location:$target?step=3&db=true");
                     }
                 }
         ?>
